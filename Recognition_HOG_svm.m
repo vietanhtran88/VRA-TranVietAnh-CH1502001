@@ -9,7 +9,7 @@ function Accurate_rate=Recognition_HOG_svm()
     save(strFileName,'Mdl_HOG_svm');
 %     load(strFileName);
     
-    load data test
+%     load data test
     [imgTestImagesAll,lblTestLabelsAll]=load_data('Data\t10k-images.idx3-ubyte','Data\t10k-labels.idx1-ubyte');    
     features_data_test=extract_HOG_Features(imgTestImagesAll);
     lblresult=predict(Mdl_HOG_svm,features_data_test');
