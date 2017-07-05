@@ -1,5 +1,5 @@
 function Accurate_rate=Recognition_HOG_svm()
-    strFileName = ['MDL\Mdl_HOG_SVM.mat'];
+%     strFileName = ['MDL\Mdl_HOG_SVM.mat'];
     %load data train
 %     [imgTrainImagesAll,lblTrainLabelsAll]=load_data('Data\train-images.idx3-ubyte','Data\train-labels.idx1-ubyte');
 %     % trich xuat feature cua tung anh
@@ -8,7 +8,7 @@ function Accurate_rate=Recognition_HOG_svm()
 %     %dung model
 %     Mdl_HOG_svm=fitcecoc(features_data_train',lblTrainLabelsAll);
 %     save(strFileName,'Mdl_HOG_svm');
-    load(strFileName);
+%     load(strFileName);
     
     %load data test
 %     [imgTestImagesAll,lblTestLabelsAll]=load_data('Data\t10k-images.idx3-ubyte','Data\t10k-labels.idx1-ubyte');    
