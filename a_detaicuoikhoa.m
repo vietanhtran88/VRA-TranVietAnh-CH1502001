@@ -1,4 +1,5 @@
 function a_detaicuoikhoa()
+    
     y=([Recognition_raw_knn() Recognition_raw_svm() Recognition_HOG_KNN() Recognition_HOG_svm() Recognition_LBP_KNN() Recognition_LBP_svm() Recognition_BoW_svm()]);    
     h=bar(y,'FaceColor',[0 .5 .5]);
     yb = cat(1, h.YData);
