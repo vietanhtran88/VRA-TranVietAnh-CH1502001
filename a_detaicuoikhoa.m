@@ -1,4 +1,8 @@
 function a_detaicuoikhoa()   
+    u_input = input('Do you want to Train again: Y/N ', 's');
+    if upper(u_input)=='Y'
+        test();
+    end 
     load('Results\nResult_RAW_KNN.mat');
     RAW_KNN=sum(nResult)/100;
     load('Results\nResult_RAW_SVM.mat');

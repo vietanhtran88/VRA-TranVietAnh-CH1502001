@@ -1,12 +1,10 @@
-function Recognition_raw_knn()
+function Recognition_raw_knn(imgTrainImagesAll,lblTrainLabelsAll,imgTestImagesAll,lblTestLabelsAll)
 %     Training
-    [imgTrainImagesAll,lblTrainLabelsAll]=load_data('Data\train-images.idx3-ubyte','Data\train-labels.idx1-ubyte');
     strFileName = ['MDL\Mdl_raw_knn.mat'];
     Mdl_raw_knn = fitcknn(imgTrainImagesAll',lblTrainLabelsAll);
     save(strFileName,'Mdl_raw_knn');
 
-%     Predict    
-    [imgTestImagesAll,lblTestLabelsAll]=load_data('Data\t10k-images.idx3-ubyte','Data\t10k-labels.idx1-ubyte');   
+%     Predict 
     lblresult = predict(Mdl_raw_knn,imgTestImagesAll');
     nResult=(lblresult==lblTestLabelsAll);
     save('Results\nResult_RAW_KNN.mat','nResult');
