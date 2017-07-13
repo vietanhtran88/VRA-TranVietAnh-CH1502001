@@ -1,4 +1,5 @@
 function a_detaicuoikhoa()   
+    tic
     u_input = input('Do you want to TRAIN and PREDICT again: Y/N ', 's');
     if upper(u_input)=='Y'
         test();
@@ -17,7 +18,7 @@ function a_detaicuoikhoa()
     HOG_SVM=sum(nResult)/100;
     load('Results\confMatrix_BOW.mat');
     BOW=mean(diag(confMatrix))*100;
-    
+    toc
     y=([RAW_KNN RAW_SVM LBP_KNN LBP_SVM HOG_KNN HOG_SVM BOW]);    
     h=bar(y,'FaceColor',[0 .5 .5]);
     yb = cat(1, h.YData);
