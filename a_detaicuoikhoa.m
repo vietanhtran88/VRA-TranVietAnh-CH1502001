@@ -1,5 +1,5 @@
 function a_detaicuoikhoa()   
-    u_input = input('Do you want to Train again: Y/N ', 's');
+    u_input = input('Do you want to TRAIN and PREDICT again: Y/N ', 's');
     if upper(u_input)=='Y'
         test();
     end 
