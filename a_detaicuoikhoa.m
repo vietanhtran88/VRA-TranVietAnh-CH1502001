@@ -26,5 +26,7 @@ function a_detaicuoikhoa()
     hold on;
     htxt = text(xb(:),yb(:), cellstr(num2str(yb(:))),'HorizontalAlignment','center','VerticalAlignment','bottom');
     set(gca,'XTickLabel', {'Raw KNN', 'Raw SVM', 'LBP KNN', 'LBP SVM','HOG KNN', 'HOG SVM', 'BOW'});
-
+    set(gcf, 'Units', 'normalized', 'Position', [0.5, -0.15, 1, 1]); 
+    title('The chart shows the accuracy rate of the prediction','FontSize', 14);
+    ylabel('accuracy rate(%)','FontSize', 14) ;
 end
