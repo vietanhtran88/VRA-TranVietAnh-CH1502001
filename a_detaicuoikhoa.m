@@ -1,6 +1,4 @@
-function a_detaicuoikhoa()
-    [imgTrainImagesAll,lblTrainLabelsAll]=load_data('Data\train-images.idx3-ubyte','Data\train-labels.idx1-ubyte');
-    [imgTestImagesAll,lblTestLabelsAll]=load_data('Data\t10k-images.idx3-ubyte','Data\t10k-labels.idx1-ubyte');   
+function a_detaicuoikhoa()   
     load('Results\nResult_RAW_KNN.mat');
     RAW_KNN=sum(nResult)/100;
     load('Results\nResult_RAW_SVM.mat');
