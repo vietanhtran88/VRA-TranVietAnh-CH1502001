@@ -2,7 +2,7 @@ function Recognition_LBP_KNN(imgTrainImagesAll,lblTrainLabelsAll,imgTestImagesAl
 %     Training
     strFileName = ['MDL\Mdl_LBP_KNN.mat'];
     features_data_train=extract_Features_LBP(imgTrainImagesAll);
-    Mdl_LBP_KNN=fitcknn(features_data_train',lblTrainLabelsAll,'NumNeighbors',8);
+    Mdl_LBP_KNN=fitcknn(features_data_train',lblTrainLabelsAll,'Distance','minkowski','NSMethod','kdtree','NumNeighbors',3);
     save(strFileName,'Mdl_LBP_KNN');
     
 %     Predict

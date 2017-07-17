@@ -31,5 +31,4 @@ function Recognition_BoW_svm()
                 imageSet(fullfile(rootFolder, '9'))];
     confMatrix = evaluate(categoryClassifier, imgSets,'Verbose',false);
     save('Results\confMatrix_BOW.mat','confMatrix');
-
 end

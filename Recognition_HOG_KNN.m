@@ -3,6 +3,7 @@ function Recognition_HOG_KNN(imgTrainImagesAll,lblTrainLabelsAll,imgTestImagesAl
     strFileName = ['MDL\Mdl_HOG_KNN.mat'];
     features_data_train=extract_HOG_Features(imgTrainImagesAll);
     Mdl_HOG_KNN=fitcknn(features_data_train',lblTrainLabelsAll,'Distance','cityblock','NumNeighbors',3);
+    
     save(strFileName,'Mdl_HOG_KNN');
 
 %     Predict 

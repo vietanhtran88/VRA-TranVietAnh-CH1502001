@@ -2,7 +2,7 @@ function Recognition_HOG_svm(imgTrainImagesAll,lblTrainLabelsAll,imgTestImagesAl
 %     Training
     strFileName = ['MDL\Mdl_HOG_SVM.mat'];
     features_data_train=extract_HOG_Features(imgTrainImagesAll);
-    Mdl_HOG_svm=fitcecoc(features_data_train',lblTrainLabelsAll);
+    Mdl_HOG_svm=fitcecoc(features_data_train',lblTrainLabelsAll,'Prior','uniform');
     save(strFileName,'Mdl_HOG_svm');
     
 %   Predict

@@ -2,7 +2,7 @@ function Recognition_LBP_svm(imgTrainImagesAll,lblTrainLabelsAll,imgTestImagesAl
 %   Training
     strFileName = ['MDL\Mdl_LBP_SVM.mat'];  
     features_data_train=extract_Features_LBP(imgTrainImagesAll);
-    Mdl_LBP_SVM=fitcecoc(features_data_train',lblTrainLabelsAll);
+    Mdl_LBP_SVM=fitcecoc(features_data_train',lblTrainLabelsAll,'Prior','uniform');
     save(strFileName,'Mdl_LBP_SVM');
 
 %     Predict
